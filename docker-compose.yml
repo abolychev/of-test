@@ -1,7 +1,13 @@
 version: '3'
 services:
-  web:
+  nginx:
+    build: nginx/
+    image: miragenn/of-test-nginx:0.0.2
+    ports:
+      - "80:80"
+  app-service:
     build: .
+    image: "miragenn/of-test-app:${VERSION}"
     ports:
       - "8080:8080"
     tty: true
