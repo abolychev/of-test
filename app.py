@@ -4,6 +4,10 @@ import datetime
 import xml.etree.ElementTree as ET
 from json import dumps
 
+@route('/api/healthcheck')
+def healthcheck():
+    return 'Ok'
+    
 @route('/api/rate/<code:re:[A-Z]{3}>')
 @route('/api/rate/<code:re:[A-Z]{3}>/<year:re:\d{4}>-<month:re:\d{2}>-<day:re:\d{2}>')
 def rate(code, year='', month='', day=''):
