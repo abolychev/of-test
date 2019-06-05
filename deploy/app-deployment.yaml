@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: miragenn/of-test-app:0.0.3
+        image: miragenn/of-test-app:0.0.4
         ports:
         - containerPort: 8080
         readinessProbe:
